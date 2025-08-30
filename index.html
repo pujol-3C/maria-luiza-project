@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animes - Maria Luiza</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lemon&display=swap" rel="stylesheet">
+<style>
+:root {
+    --roxo: #6a1b9a;
+    --laranja: #ff8f00;
+    --cinza: #f9f9f9;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    background-color: var(--cinza);
+}
+header {
+    background-color:white;
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+}
+header img { width:90px; }
+.nav-link {
+    margin-left:1rem;
+    font-weight:600;
+    color: var(--roxo);
+}
+#inicio {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Anime_collage.jpg') center/cover no-repeat;
+    height:480px;
+    border-radius:20px;
+    margin:2rem auto;
+    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+#inicio::before {
+    content:"";
+    position:absolute;
+    top:0;left:0;width:100%;height:100%;
+    background-color: rgba(106,27,154,0.6);
+    border-radius:20px;
+}
+#inicio h1, #inicio p, #inicio .btn-inicio {
+    position:relative;
+    z-index:1;
+}
+#inicio h1 { font-family:'Lemon', cursive; font-size:2.8rem; }
+#inicio p { margin-top:0.5rem; font-size:1.1rem; }
+.btn-inicio {
+    margin-top:1rem;
+    background-color: var(--laranja);
+    border:none;
+    padding:0.7rem 2rem;
+    border-radius:50px;
+    color:white;
+    font-weight:bold;
+}
+#sobre {
+    max-width:1000px;
+    margin:4rem auto;
+    padding:0 1rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+    align-items:center;
+}
+#sobre img { flex:1 1 400px; border-radius:15px; }
+.sobre-texto { flex:1 1 500px; }
+#sobre h2 { font-family:'Lemon', cursive; font-size:2.5rem; color: var(--roxo); margin-bottom:1rem; }
+#sobre p { font-size:1.1rem; line-height:1.6; }
+#galeria {
+    background-color:#f3e5f5;
+    padding:3rem 1rem;
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    flex-wrap:wrap;
+}
+#galeria img { width:45%; border-radius:15px; }
+#contato {
+    max-width:700px;
+    margin:4rem auto;
+    padding:2rem;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+#contato h2 { text-align:center; color:var(--roxo); margin-bottom:1.5rem; }
+#contato .form-control { margin-bottom:1rem; border-radius:8px; }
+#contato button { width:100%; border-radius:50px; background-color: var(--laranja); border:none; color:white; font-weight:bold; padding:0.7rem; }
+footer {
+    background: linear-gradient(90deg, var(--roxo), var(--laranja));
+    color:white;
+    text-align:center;
+    padding:2rem 0;
+}
+footer i { margin:0 0.5rem; font-size:1.5rem; }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Anime_icon.png" alt="Logo Anime">
+    <ul class="d-flex list-unstyled mb-0">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#galeria" class="nav-link">Galeria</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+    </ul>
+</header>
+
+<section id="inicio">
+    <h1>Mundo dos Animes</h1>
+    <p>Descubra histórias incríveis e personagens marcantes do universo dos animes.</p>
+    <a href="#sobre" class="btn-inicio">Saiba Mais</a>
+</section>
+
+<section id="sobre">
+    <div class="sobre-texto">
+        <h2>O Fascínio pelos Animes</h2>
+        <p>Os animes são animações japonesas que combinam arte e narrativa. Eles abordam diversos gêneros como ação, fantasia, romance e ficção científica, encantando públicos de todas as idades pelo mundo.</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Anime_illustration.jpg" alt="Ilustração Anime">
+</section>
+
+<section id="galeria">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Naruto_and_Sasuke.png" alt="Personagens Anime">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Studio_Ghibli.png" alt="Studio Ghibli">
+</section>
+
+<section id="contato">
+    <h2>Entre em Contato</h2>
+    <form>
+        <input type="text" class="form-control" placeholder="Seu nome">
+        <input type="email" class="form-control" placeholder="Seu e-mail">
+        <textarea class="form-control" rows="4" placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>Desenvolvido por Maria Luiza — Animes</p>
+    <div>
+        <i class="bi bi-whatsapp"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-linkedin"></i>
+    </div>
+</footer>
+
+</body>
+</html>
